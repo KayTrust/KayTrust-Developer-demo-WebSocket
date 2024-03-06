@@ -1,6 +1,6 @@
 {
-  "name": "demo-socket-japan",
-  "version": "0.0.1",
+  "name": "kaytrust-oss-demo-socket",
+  "version": "0.1.5",
   "description": "",
   "main": "index.ts",
   "scripts": {

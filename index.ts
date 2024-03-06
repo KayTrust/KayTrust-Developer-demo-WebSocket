@@ -29,6 +29,10 @@ class App {
                 logger.info(`Emitiendo un shared-identity-ask-client`);
                 socket.to(args.to).emit('shared-identity-ask-client', args.content);
             });
+            socket.on("shared-identity-opendoor", (args) => {
+                logger.info(`Emitiendo un shared-identity-opendoor-client`);
+                socket.to(args.to).emit('shared-identity-opendoor-client', args.content);
+            });
             socket.on("shared-identity-custom", (args) => {
                 logger.info(`Emitiendo un shared-identity-custom-client`);
                 socket.to(args.to).emit('shared-identity-custom-client', args.content);
