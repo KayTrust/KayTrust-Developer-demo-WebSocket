@@ -18,7 +18,7 @@ class App {
         logger.info(`Server is running at https://localhost:${port}`);
         this.io.on("connection", (socket) => {
             socket.on("shared-identity-provider", (args) => {
-                logger.info(`Emitiendo un shared-identity-provider-client`);
+                logger.info(`Emitiendo un shared-identity-provider-client arg.to:${args.to}-args.content:${args.content}`);
                 socket.to(args.to).emit('shared-identity-provider-client', args.content);
             });
             socket.on("shared-identity-provider-2", (args) => {
